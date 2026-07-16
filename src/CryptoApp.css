@@ -1,0 +1,213 @@
+/* --- Global Resets & Variables --- */
+:root {
+--bg-primary: #0f172a;
+--bg-secondary: #1e293b;
+--bg-tertiary: #334155;
+--accent-blue: #3b82f6;
+--accent-green: #10b981;
+--accent-red: #ef4444;
+--text-main: #f8fafc;
+--text-muted: #94a3b8;
+--border-color: #475569;
+}
+
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body {
+background-color: var(--bg-primary);
+color: var(--text-main);
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+min-height: 100vh;
+padding: 2rem;
+}
+
+/* --- Dashboard Structure --- */
+.dashboard-container {
+max-width: 1400px;
+margin: 0 auto;
+}
+
+.dashboard-header {
+margin-bottom: 2rem;
+border-bottom: 1px solid var(--border-color);
+padding-bottom: 1.5rem;
+}
+
+.dashboard-header h1 {
+font-size: 2.5rem;
+font-weight: 800;
+background: linear-gradient(to right, #3b82f6, #60a5fa);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+color: var(--text-muted);
+margin-top: 0.5rem;
+font-size: 1.1rem;
+}
+
+/* Grid Layout */
+.dashboard-grid {
+display: grid;
+grid-template-columns: 1.2fr 1fr;
+gap: 2rem;
+}
+
+@media (max-width: 1024px) {
+.dashboard-grid {
+grid-template-columns: 1fr;
+}
+}
+
+/* Sections */
+.chart-section, .list-section {
+background-color: var(--bg-secondary);
+border-radius: 12px;
+padding: 1.5rem;
+border: 1px solid var(--border-color);
+box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.chart-section h2 {
+font-size: 1.5rem;
+margin-bottom: 1.5rem;
+color: var(--text-main);
+}
+
+/* --- Controls / Search & Sort --- */
+.controls-container {
+display: flex;
+gap: 1rem;
+margin-bottom: 1.5rem;
+}
+
+.search-wrapper {
+position: relative;
+flex: 1;
+}
+
+.search-icon {
+position: absolute;
+left: 12px;
+top: 50%;
+transform: translateY(-50%);
+color: var(--text-muted);
+}
+
+.search-input {
+width: 100%;
+padding: 0.75rem 1rem 0.75rem 2.5rem;
+background-color: var(--bg-primary);
+border: 1px solid var(--border-color);
+border-radius: 8px;
+color: var(--text-main);
+font-size: 0.95rem;
+outline: none;
+transition: border-color 0.2s;
+}
+
+.search-input:focus {
+border-color: var(--accent-blue);
+}
+
+.sort-select {
+padding: 0.75rem 1rem;
+background-color: var(--bg-primary);
+border: 1px solid var(--border-color);
+border-radius: 8px;
+color: var(--text-main);
+outline: none;
+cursor: pointer;
+}
+
+/* --- Crypto Table --- */
+.table-wrapper {
+overflow-y: auto;
+max-height: 550px;
+}
+
+.crypto-table {
+width: 100%;
+border-collapse: collapse;
+text-align: left;
+}
+
+.crypto-table th {
+padding: 1rem;
+border-bottom: 2px solid var(--border-color);
+color: var(--text-muted);
+font-weight: 600;
+font-size: 0.9rem;
+}
+
+.coin-row {
+cursor: pointer;
+border-bottom: 1px solid var(--border-color);
+transition: background-color 0.2s;
+}
+
+.coin-row:hover {
+background-color: var(--bg-tertiary);
+}
+
+.coin-row.selected {
+background-color: rgba(59, 130, 246, 0.15);
+border-left: 4px solid var(--accent-blue);
+}
+
+.coin-row td {
+padding: 1rem;
+vertical-align: middle;
+}
+
+.coin-info {
+display: flex;
+align-items: center;
+gap: 0.75rem;
+}
+
+.coin-icon {
+width: 32px;
+height: 32px;
+border-radius: 50%;
+}
+
+.coin-symbol {
+color: var(--text-muted);
+text-transform: uppercase;
+font-size: 0.85em;
+}
+
+/* --- Utilities --- */
+.price-up {
+color: var(--accent-green);
+font-weight: 600;
+}
+
+.price-down {
+color: var(--accent-red);
+font-weight: 600;
+}
+
+.error-banner {
+background-color: rgba(239, 68, 68, 0.15);
+color: var(--accent-red);
+border: 1px solid var(--accent-red);
+padding: 1rem;
+border-radius: 8px;
+margin-bottom: 1.5rem;
+}
+
+.loader {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 300px;
+color: var(--text-muted);
+font-size: 1.2rem;
+}
