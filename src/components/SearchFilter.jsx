@@ -1,4 +1,3 @@
-import React from "react";
 import { Search, Star } from "lucide-react";
 
 const SearchFilter = ({

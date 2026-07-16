@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import CryptoTable from "./CryptoTable";
 import CryptoChart from "./CryptoChart";
 import SearchFilter from "./SearchFilter";
