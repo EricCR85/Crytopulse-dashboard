@@ -9,33 +9,28 @@ const SearchFilter = ({
   setShowWatchlistOnly,
 }) => {
   return (
-    <div
-      className="controls-container"
-      style={{ display: "flex", flexDirection: "column", gap: "1rem" }}
-    >
-      <div style={{ display: "flex", gap: "1rem" }}>
-        <div className="search-wrapper" style={{ flex: 1 }}>
-          <Search className="search-icon" size={18} />
-          <input
-            type="text"
-            className="search-input"
-            placeholder="Search by name or symbol..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-          />
-        </div>
-
-        <select
-          className="sort-select"
-          value={sortBy}
-          onChange={(e) => setSortBy(e.target.value)}
-        >
-          <option value="market_cap_desc">Market Cap: High to Low</option>
-          <option value="price_desc">Price: High to Low</option>
-          <option value="price_asc">Price: Low to High</option>
-          <option value="change_desc">24h Gainers</option>
-        </select>
+    <div className="controls-container">
+      <div className="search-wrapper">
+        <Search className="search-icon" size={18} />
+        <input
+          type="text"
+          className="search-input"
+          placeholder="Search by name or symbol..."
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+        />
       </div>
+
+      <select
+        className="sort-select"
+        value={sortBy}
+        onChange={(e) => setSortBy(e.target.value)}
+      >
+        <option value="market_cap_desc">Market Cap: High to Low</option>
+        <option value="price_desc">Price: High to Low</option>
+        <option value="price_asc">Price: Low to High</option>
+        <option value="change_desc">24h Gainers</option>
+      </select>
 
       <button
         onClick={() => setShowWatchlistOnly(!showWatchlistOnly)}
@@ -48,7 +43,9 @@ const SearchFilter = ({
           backgroundColor: showWatchlistOnly
             ? "rgba(234, 179, 8, 0.15)"
             : "var(--bg-primary)",
-          border: `1px solid ${showWatchlistOnly ? "#eab308" : "var(--border-color)"}`,
+          border: `1px solid ${
+            showWatchlistOnly ? "#eab308" : "var(--border-color)"
+          }`,
           borderRadius: "8px",
           color: showWatchlistOnly ? "#eab308" : "var(--text-main)",
           cursor: "pointer",
