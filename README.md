@@ -1,16 +1,18 @@
-# React + Vite
+# 📈 CryptoPulse Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A real-time cryptocurrency market tracking application built with React, Vite, and Recharts. Users can monitor live prices, view interactive 7-day historical trend charts, search/filter assets, and build a persistent watchlist.
 
-Currently, two official plugins are available:
+🔗 **[Live Demo on Vercel] https://crytopulse-dashboard-git-main-eric-reeves-projects.vercel.app/**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
+* **Real-Time Data:** Integrates with the CoinGecko API to fetch live pricing and market metrics.
+* **Interactive Visualizations:** Renders beautifully responsive 7-day price charts using Recharts Area components.
+* **Persistent Watchlist:** Star favorite assets to save them locally using `localStorage`.
+* **Instant Filter & Sort:** Search assets by name or symbol, and sort by market cap, price, or 24h performance.
+* **Modern UI:** Responsive CSS Grid design styled from scratch with dark mode aesthetics.
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+* **Frontend Framework:** React 18 (Vite)
+* **Charts:** Recharts
+* **Icons:** Lucide React
+* **Hosting:** Vercel
